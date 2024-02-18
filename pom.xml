@@ -653,6 +653,11 @@
             <version>3.9.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.github.amithkoujalgi</groupId>
+            <artifactId>ollama4j</artifactId>
+            <version>1.0.47</version>
+        </dependency>
     </dependencies>
     <build>
         <testResources>

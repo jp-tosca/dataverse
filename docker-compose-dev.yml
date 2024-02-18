@@ -220,6 +220,18 @@ services:
       MINIO_ROOT_PASSWORD: s3cr3t_4cc355_k3y
     command: server /data
 
+  ollama:
+    container_name: "ollama"
+    hostname: "ollama"
+    image: ollama/ollama
+    restart: on-failure
+    ports:
+      - "11434:11434"
+    networks:
+      - dataverse
+    volumes:
+      - ./docker-dev-volumes/llama_storage:/data
+
 networks:
   dataverse:
     driver: bridge
